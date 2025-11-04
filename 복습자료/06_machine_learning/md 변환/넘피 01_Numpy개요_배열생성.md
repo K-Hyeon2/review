@@ -133,9 +133,18 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 1,
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "<class 'numpy.ndarray'>\n",
+      "[  1  10   2  30 100]\n"
+     ]
+    }
+   ],
    "source": [
     "import numpy as np\n",
     "\n",
@@ -146,31 +155,62 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 2,
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([  1,  10,   2,  30, 100])"
+      ]
+     },
+     "execution_count": 2,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
    "source": [
     "a1"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 5,
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "배열 형태(-축별 크기. 튜플): (5,)\n",
+      "랭크(차원): 1\n",
+      "총 원소 개수: 5\n",
+      "데이터타입: int64\n"
+     ]
+    }
+   ],
    "source": [
     "# ndarray 속성들\n",
     "print(\"배열 형태(-축별 크기. 튜플):\", a1.shape)\n",
-    "# print(\"랭크(차원):\", a1.ndim)\n",
-    "# print(\"총 원소 개수:\", a1.size)\n",
-    "# print(\"데이터타입:\", a1.dtype)"
+    "print(\"랭크(차원):\", a1.ndim)\n",
+    "print(\"총 원소 개수:\", a1.size)\n",
+    "print(\"데이터타입:\", a1.dtype)"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 7,
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "float64\n",
+      "[  1.    2.    5.   10.  -20.  -30.    1.1]\n"
+     ]
+    }
+   ],
    "source": [
     "# 다른 타입의 값들을 넣으면 가장 큰 타입으로 통일한다. (타입순서: bool < int < float < str)\n",
     "a2 = np.array([1, 2, 5, 10, -20, -30, 1.1])\n",
@@ -180,9 +220,17 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 13,
+   "execution_count": 6,
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "int8 int8\n"
+     ]
+    }
+   ],
    "source": [
     "# 생성시 타입 지정.\n",
     "a3 = np.array([ 1, 2, 3, 4], dtype=\"int8\")  # 문자열로 지정\n",
